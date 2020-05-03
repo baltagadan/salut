@@ -1,0 +1,1162 @@
+<head>
+ <title>Мониторинг прихода денег</title>
+ 
+  <style type="text/css">
+    input, .kkm {
+      display: none;
+      }
+
+      u + .body .mt10 {
+      margin-top: 10px;
+      }
+      u + .body .mt5 {
+      margin-top: 5px;
+      }
+      u + .body .mb5 {
+      margin-bottom: 5px;
+      }
+      u + .body .mb10 {
+      margin-bottom: 10px;
+      }
+      @media screen and (max-width: 480px) {
+      .ticket-left, .ticket-right {
+      display: none !important;
+      }
+      .ticket-middle {
+      padding: 15px 5px !important;
+      }
+      .mob-tix {
+      padding-left: 25px !important;
+      padding-right: 25px !important;
+      }
+      }
+      @media screen and (max-width: 600px) {
+      .mob-hide {
+      display: none;
+      }
+      .img-max {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      }
+      .spacer-max {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: 1px !important;
+      }
+      .hero h1 {
+      font-size: 40px !important;
+      line-height: 46px !important;
+      }
+      }
+      @media screen and (min-width: 100px) {
+      u + .body .spacer-max {
+      display:none !important;
+      }
+      .td, .tfoot, .thead {
+      display: table-cell;
+      }
+      .questions {
+        margin-top: 25px;
+      }
+      .des-tal {
+      text-align: left !important;
+      }
+      .va-b {
+      vertical-align: bottom;
+      }
+      .va-m {
+      vertical-align: middle;
+      }
+      .table {
+      display: table;
+      width: 100%;
+      }
+      .w50 {
+      min-width: 300px;
+      width: 50%;
+      }
+      .w40p {
+      width: 40%;
+      }
+      .w50p {
+      width: 50%;
+      }
+      .w20p {
+      width: 25%;
+      }
+      .w15p {
+      width: 15%;
+      }
+      .w60p {
+      width: 60%;
+      }
+      .w70p {
+      width: 70%;
+      }
+      .w100p {
+      width: 100%;
+      }
+      .w5p {
+      width: 2%;
+      min-height: 25px;
+      }
+      .w30p {
+        width: 32%;
+      }
+      .session .w30p {
+      width: 225px;
+      float: left;
+      }
+      .des-show {
+      display: block !important;
+      }
+      .td-top {
+      display: table-cell;
+      float: left;
+      }
+      .Sud, .Centru, .Nord {
+      border-radius: 3px;
+      }
+      .session .Sud, .session .Centru, .session .Nord {
+
+      box-sizing: border-box;
+      }
+      .session .Sud:hover, .session .Centru:hover, .session .Nord:hover {
+      transition: .3s;
+      box-shadow: 0px 10px 12px -5px rgba(206,213,219,0.8);
+      cursor: pointer;
+      }
+      .session .Centru:hover {
+      border: 2px solid #54c8ee !important;
+      }
+      .session .Centru:hover .h3, .session .Centru:hover .p {
+      color: #54c8ee !important;
+      }
+      .session .Nord:hover {
+      border: 2px solid #f88074 !important;
+      }
+      .session .Nord:hover .h3, .session .Nord:hover .p {
+      color: #f88074 !important;
+      }
+      .session .Sud:hover {
+      border: 2px solid #fac46a !important;
+      }
+      .session .Sud:hover .h3, .session .Sud:hover .p {
+      color: #fac46a !important;
+      }
+      .des-p0 {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      }
+      u + .body .des-p0 {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      }
+      u + .body .w5p, u + .body .w30p {
+      width: auto !important;
+      }
+      u + .body .gmail-hide {
+      display: none !important;
+      }
+      u + .body .gmail-show {
+      display: block !important;
+      }
+      u + .body .gmail-show-dib {
+      display: inline-block !important;
+      }
+      }
+      @media screen and (min-width: 800px) {
+      .tweet-col {
+      display: table-cell;
+      vertical-align: top;
+      text-align: left;
+      }
+      .tweet-arrow-show {
+      display: table-cell !important;
+      }
+      }
+      @media screen and (min-width: 1000px) {
+      u + .body .mw600 {
+        min-width: 600px !important;
+      }
+      .tweet-col-show {
+      display: table-cell !important;
+      text-align: left;
+      }
+      }
+      @media screen and (min-width: 1350px) {
+      u + .body .w30p {
+      width: 32% !important;
+      }
+      u + .body .w5p {
+      width: 2% !important;
+      }
+      u + .body .des-p0 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      }
+      u + .body .gmail-cta {
+      display: inline-block !important;
+      }
+      u + .body .gmail-hide {
+      display: none !important;
+      }
+      u + .body h1, u + .body h2, u + .body h3 {
+      font-weight: bold !important;
+      }
+      }
+ </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./scroll/scroll.css">
+<!--custom scroll bar-->
+  
+   <link rel="stylesheet"  type="text/css" href="./graficele/style.css">
+<!--stilu pentru grafic-->
+
+  <link rel="stylesheet" type="text/css" href="./CSS/popup.css">
+ <!--stilu pentru popup cu graficele-->
+
+ <link rel="stylesheet" type="text/css" href="./CSS/fonturi.css">
+  <!--mai sus sunt fonturile-->
+  <style type="text/css">
+      @media screen and (min-width: 100px) {
+      .fallback-hide {
+      display: none !important;
+      }
+      .counter {display: block;
+      margin-left: auto;
+      margin-right: auto;
+      ;
+      }
+      .kkm, .show {
+      display: block !important;
+      }
+      .★:not(#★) {
+      display: none !important;
+      }
+      .♥:not(#♥) {
+      display: block !important;
+      }
+      label {
+      cursor: pointer;
+      display: block;
+      }
+      select {
+      border: 1px solid #333;
+      background: transparent;
+      width: 45px;
+      font-size: 15px;
+      border: 1px solid #cccccc;
+      height: 28px;
+      color: #788394;
+      outline: none;
+      font-family: 'proxima_nova_rgregular', Proxima Nova, Helvetica, sans-serif;
+      }
+      blockquote {
+      margin: 0;
+      }
+
+      }
+  </style>
+   
+  <style type="text/css">
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      .webkit-hide {
+      display: none !important;
+      }
+      .webkit-show {
+      display: block !important;
+      }
+      h1, h2, h3, .bold {
+      font-weight: normal !important;
+      }
+      }
+      @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-width: 300px) {
+      .webkit-hide-desktop {
+      display: none !important;
+      }
+      .webkit-show-desktop {
+      display: block !important;
+      }
+      .warning {
+      display: inline-block !important;
+      }
+      label[for="wk"], label[for="en"], label[for="cd"],label[for="det"] {
+      display: block !important;
+      }
+      .col-space {
+      display: table-cell !important;
+      }
+      #xz:checked, #xz:checked~[type="radio"] {
+      display: inline-block !important;
+      }
+      #wk:checked~* .ymw {
+      display: block !important;
+      }
+      .ymw blockquote, .bjm blockquote, .kjm blockquote {
+      animation: message 2s;
+      }
+      #wk:checked~* .Sud {
+      background-color: #fac46a !important;
+      border: 2px solid #fac46a !important;
+      }
+      #wk:checked~* .Sud .h3 {
+      color: #ffffff !important;
+      }
+      #wk:checked~* .Sud .p {
+      color: #73521d !important;
+      }
+      #en:checked~* .Centru {
+      background-color: #54c8ee !important;
+      border: 2px solid #54c8ee !important;
+      }
+      #en:checked~* .Centru .h3 {
+      color: #ffffff !important;
+      }
+      #en:checked~* .Centru .p {
+      color: #245e71 !important;
+      }
+      #cd:checked~* .Nord {
+      background-color: #f88074 !important;
+      border: 2px solid #f88074 !important;
+      }
+      #cd:checked~* .Nord .h3 {
+      color: #ffffff !important;
+      }
+      #cd:checked~* .Nord .p {
+      color: #82372f !important;
+      }
+      #en:not(:checked)~* .bjm {
+      display: none;
+      }
+      #wk:not(:checked)~* .ymw {
+      display: none;
+      }
+      #cd:not(:checked)~* .kjm {
+      display: none;
+      }
+      .Centru-region , .nord-region  {
+      margin-top: 0px !important;
+      }
+      @keyframes message {
+      0% {
+      opacity: 0;
+      }
+      30% {
+      opacity: 1;
+      }
+      100% {
+      opacity: 1;
+      }
+      }
+      }
+  </style>
+
+<!---->
+<div id="draw">
+   <div class="welcome-bg">
+    <div class="welcome">
+      <h1 class="fade-up">Автоматическое</h1>
+      <h1 class="fade-up">отражение</h1>
+      <h1 class="fade-up">продаж</h1>
+      <h2 class="fade-up">от Baltaga Dan</h2>
+
+      <a href="https://web.facebook.com/baltaga.daniel" target="blank" title="Facebook link" class="fade-up">@R.A.V.</a>
+      <span class="btn fade-up"
+            title="start"
+            onclick="showDiv()">
+        START
+      </span>
+    </div>
+   </div>
+</div>
+  
+<script type="text/javascript">
+  function showDiv() {
+   document.getElementById('draw').style.display = "none";}
+</script>
+<!--script pentru a inchide welcomu si a arata pagina-->
+
+  <!--welcome deasupra paginii-->
+
+  </head>
+
+<body style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin: 0; padding: 0;" class="body">
+  
+
+
+  <div class="frame" style="background-color:#e1e7ed;box-shadow:-2px 0 10px rgba(188,190,202,0.32);">
+    <div class="section" style="margin:0 auto;background-color:#e1e7ed;">
+     
+      <div class="hero" style="background-color:#3c4656;padding:25px 0 75px 0;margin:0 auto;">
+       
+        <div class="max1000 center pl15 pr15" style="padding-right:15px;padding-left:15px;margin:0 auto;max-width: 800px; margin: 0 auto;">
+          <div class="pt10 pb50 clear" style="padding-top:10px;padding-bottom:50px;mso-margin-top-alt: 20px; mso-margin-bottom-alt: 20px;">
+            <div class="Bemol-link">
+              <a href="http://Bemol.md" target="_blank" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;">
+                <img src="./images/logomare.svg" width="310" height="150" alt="Bemol" style="color: #ffffff; font-size: 16px; margin: 0 auto; display: block; border: 0px;">
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="td">
+              <div class="tac" style="text-align:center;">
+                <h1 style="margin:0;font-size:46px;line-height:50px;color:#ffffff;font-weight:bold;display:inline-block;font-family:'brandon_bold', Brandon Grotesque, Helvetica, Arial, sans-serif;">
+                    В данном разделе предоставляеться информация о выручке предприятия-разделенно по обьектам продаж.
+                    </h1>
+                    <br><br><br>
+                <p class="pt15 fsz18 lh28" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;padding-top:15px;font-size:15px;line-height:23px;color:#b9cef0;">
+                  
+                  *информация представляет собой данные о продажах с П.О.С терминалов а также о выручке с просканированного на АЗС товара с начала месяца накопительно.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center pt50 pl15 pr15 tac des-p0 webkit-hide-desktop gmail-hide ♥" id="♥" style="padding-right:15px;padding-left:15px;padding-top:50px;margin:0 auto;text-align:center;">
+          <div class="table w100p"> 
+             
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" style="margin:0 auto;background-color:#e1e7ed;background: url('./images/squares-short.png') left 0px top 400px no-repeat; background-size: contain;">
+
+      <div class="pt75 pb75 pl15 pr15 center session tac" style="padding-right:15px;padding-left:15px;padding-top:75px;padding-bottom:75px;margin:0 auto;text-align:center;max-width: 700px; margin: -40 auto;">
+  
+  <h2 style="margin:-10px;display:none;font-family:'brandon_bold', Brandon Grotesque, Helvetica, Arial, sans-serif;font-weight:bold;font-size:30px;line-height:36px;color:#3c4656 !important;display: none;" class="webkit-show-desktop ★" id="★">
+            Итоговая цифра продаж- Счетчик 
+  </h2>
+
+ <div style="display:none;margin:0 auto;border:2px solid #cad2df;width:30px;margin-top:30px;margin-bottom:5px;font-size:0px;line-height:0px;text-decoration:underline;display: none;" class="underline center gmail-show webkit-show-desktop ★" id="★">
+ </div>
+
+<!--counterul mare merge aici-->
+
+ <span class="counter" data-count="9392650"style="font-size:30px;display:inline; width:170px;vertical-align: middle;text-align: center;color:#3c4656;">0</span> 
+ <span style="display:inline;font-size:26px;vertical-align: middle;color:#3c4656;">&nbspлей</span>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="./java/script.js"></script>
+
+
+<!--aici mai sus e counterul mare-->  
+
+ <div style="display:none;margin:0 auto;border:2px solid #cad2df;width:30px;margin-top:5px;margin-bottom:10px;font-size:0px;line-height:0px;text-decoration:underline;display: none;" class="underline center gmail-show webkit-show-desktop ★" id="★">
+  
+ </div>
+        <br>
+      <input type="checkbox" style="display: none;" id="xz">
+      <input type="radio" name="page" style="display: none;" id="wk" checked="">
+      <input type="radio" name="page" style="display: none;" id="en">
+      <input type="radio" name="page" style="display: none;" id="cd">
+  <div style="padding-bottom:10px;display:none;margin:0 auto;text-align:center;display: none;" class="center tac des-p0 pb10 gmail-show webkit-show-desktop ★" id="★">
+          <div class="table w100p">
+ <label for="wk" class="wk" style="display: none;">
+                  <span class="td w30p pt25 pb25 Sud va-m" style="padding-top:25px;padding-bottom:25px;background-color:#ffffff;border:2px solid #ffffff;">
+                        <span class="h3" style="color:#c7d0dd;font-family:'merriweather', Merriweather, Georgia, serif;font-size:24px;display: block;">
+                            Юг
+                        </span>
+                        <span class="p pt5 lh24" style="padding-top:5px;color:#788394;font-size:16px;line-height:24px;color:#3f3f40;display: block;">
+                        <span class="counter"data-count="187880"style="font-size:16px;display:inline">0</span>
+                        <span style="display:inline;font-size:16px;">лей</span>
+                        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                        <script  src="./java/script1.js"></script> 
+                        </span>
+                 </span>  
+   </label>
+            <div class="td w5p col-space" style="display: none;">&nbsp;</div>
+            <label for="en" class="en" style="display: none;">
+ <span class="td w30p Centru pt25 pb25 pl25 pr25 va-m" style="padding-top:25px;padding-bottom:25px;padding-right:25px;padding-left:25px;background-color:#ffffff;border:2px solid #ffffff;">
+                   <span class="h3" style="color:#c7d0dd;font-family:'merriweather', Merriweather, Georgia, serif;font-size:24px;display: block;">
+                           Кишинёв
+                        </span>
+                        <span class="p pt5 lh24" style="padding-top:5px;color:#788394;font-size:16px;line-height:24px;color:#3f3f40;display: block;">
+                        <span class="counter"data-count="3965556"style="font-size:16px;display:inline">0</span>
+                        <span style="display:inline;font-size:16px;">лей</span>
+                        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                        <script  src="./java/script1.js"></script> 
+                        </span>
+            </span>
+            </label>
+            <div class="td w5p col-space" style="display: none;">&nbsp;</div>
+            <label for="cd" class="cd" style="display: none;">
+             <span class="td w30p Nord pt25 pl25 pr25 pb25 vam" style="padding-top:25px;padding-bottom:25px;padding-right:25px;padding-left:25px;background-color:#ffffff;border:2px solid #ffffff;">
+                    <span class="h3" style="color:#c7d0dd;font-family:'merriweather', Merriweather, Georgia, serif;font-size:24px;display: block;">
+                           Север
+                        </span>
+                        <span class="p pt5 lh24" style="padding-top:5px;color:#788394;font-size:16px;line-height:24px;color:#3f3f40;display: block;">
+                        <span class="counter"data-count="3548290"style="font-size:16px;display:inline">0</span>
+                        <span style="display:inline;font-size:16px;">лей</span>
+                        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                        <script  src="./java/script1.js"></script> 
+                        </span>
+            </span>
+            </label>
+          </div>
+        </div>
+
+    <br class="hide" style="display:none;">
+    <div class="kkm ★" id="★">
+      <div class="ymw">
+        <div style="display: none;" class="show">
+         <div style="padding-top:50px;padding-bottom:50px;padding-right:50px;padding-left:100px;text-align:left;background: #ffffff; box-shadow: 0px 10px 12px -5px rgba(206,213,219,0.8); border-radius: 3px;" class="td pt50 pb50 pl50 pr50 tal mw600">
+
+ <!--inceput regiune SUD-->
+ <blockquote>
+ <div class="Sud-region">
+          <h3 style="font-family:'brandon_bold', Brandon Grotesque, sans-serif;font-size:30px;line-height:36px;color:#3c4656;font-weight:bold;margin:0;">Южный регион &nbsp;
+          <span class="fsz15 Sud-earlybird" style="font-size:15px;color: #3c4656;">(13 SAC)
+          </span>
+          </h3>
+          <div class="table mt25 mb10" style="border-bottom: 1px solid #eee;">
+                        <div class="td w70p pr15 pt25 pb10" style="padding-bottom:10px;padding-right:15px;padding-top:25px;">
+                          <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;">Название АЗС</p>
+                        </div>
+                        <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+                            <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;">Сумма&nbspпродаж,лей</p>
+                        </div>
+
+                        <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+                        
+                        </div>
+                     </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Cahul</p> 
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;display: none;"></div>
+                          </div>
+                        <div class="td w15p va-m">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 100995</p>
+                          
+                        </div>
+                        <div class="td w15p">
+                          
+                        </div>
+                     </div>      
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Cimislia</p> 
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;display: none;"></div>
+                          </div>
+                        <div class="td w15p va-m">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 35055</p>
+                          
+                        </div>
+                        <div class="td w15p">
+                          
+                        </div>
+                     </div>                
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Taraclia (s. Balabanu)</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 6905</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                     </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Leova</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 65194</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                     </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Bacioi 1-2 </p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 25894</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                     </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Calea Iesilor str.</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 987126</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                     </div>                      
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Causeni</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 95665</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                     </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Ceadir-Lunga</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 12545</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                     </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Nimoreni</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 84695</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                     </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Sculeni</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 140036</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                     </div> 
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Leuseni</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 213455</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                     </div> 
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Ungheni</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 85347</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                     </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Comrat</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 25892</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                     </div>  
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                     </div> 
+          <div class="table mt25 mb10" style="border-bottom: 2px solid #eee; border-top: 2px solid #eee;">
+                        <div class="td w70p pr15 pt25 pb10" style="padding-bottom:10px;padding-right:15px;padding-top:10px;">
+                          <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;">ИТОГО</p>
+                        </div>
+                        <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:10px;">
+                            <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;">1878804</p>
+                        </div>
+
+                        <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+                          
+                        </div>
+                      </div>                  
+                      <br>    
+  <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;font-style: italic; text-align: center;">Данные о продаже обновляються в живом потоке.
+  </p>
+  <br>
+  </div>
+
+       
+                  </form>
+  </blockquote>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#cad2df" style="width:600px; max-width: 600px; font-size: 1px; line-height: 1px;">&nbsp;</td></tr>
+  </table>
+  </div>
+  </div>
+  </div>
+
+ <!--sfirsitul regiunii de sud-->
+
+ <!--inceput regiunii de Chisinau-->
+ <div class="bjm">
+
+            <div style="display: none; margin-top: 25px;" class="show Centru-region">
+              <div style="padding-top:50px;padding-bottom:50px;padding-right:50px;padding-left:100px;text-align:left;background: #ffffff; box-shadow: 0px 10px 12px -5px rgba(206,213,219,0.8); border-radius: 3px; margin-top: 25px;" class="td pt50 pb50 pl50 pr50 tal mw600">
+                
+ <blockquote>
+ <div class="Centru-">
+          <h3 style="font-family:'brandon_bold', Brandon Grotesque, sans-serif;font-size:30px;line-height:36px;color:#3c4656;font-weight:bold;margin:0;">Центральный регион&nbsp;<span class="fsz15" style="font-size:15px;">(13 SAC)</span></h3>
+          <div class="table mt25 mb10" style="border-bottom: 1px solid #eee;">
+          <div class="td w70p pr15 pt25 pb10" style="padding-bottom:10px;padding-right:15px;padding-top:25px;">
+          <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;">Название АЗС
+          </p>
+          </div>
+          <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+          <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;">Сумма&nbspпродаж,лей
+          </p>
+                        </div>
+
+                  <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+                        
+                        </div>
+                  </div>
+                  <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Hincesti-1</p> 
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;display: none;"></div>
+                          </div>
+                        <div class="td w15p va-m">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 467875</p>
+                          
+                        </div>
+                        <div class="td w15p">
+                          
+                        </div>
+                      </div>     
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Muncesti-1</p> 
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;display: none;"></div>
+                          </div>
+                        <div class="td w15p va-m">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 95351</p>
+                          
+                        </div>
+                        <div class="td w15p">
+                          
+                        </div>
+                      </div>                
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Mihai Viteazu</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 12889</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Grenoble str.</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 65987</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Metro-2 </p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 85236</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Hincesti-2</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 767126</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>                      
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Muncesti-2</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 48936</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Cricova Ciorescu</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 75315</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Stauceni Nou</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 65478</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Calea Basarabiei</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 32148</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div> 
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Viaduc Mall</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 335368</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div> 
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Renasterii Circ</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 962369</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">M.Sadoveanu</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;"> 951478</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>  
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                      </div> 
+          <div class="table mt25 mb10" style="border-bottom: 2px solid #eee; border-top: 2px solid #eee;">
+          <div class="td w70p pr15 pt25 pb10" style="padding-bottom:10px;padding-right:15px;padding-top:10px;">
+                          <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;">ИТОГО</p>
+                        </div>
+          <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:10px;">
+                            <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;">3965556</p>
+                        </div>
+
+          <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+                          
+                        </div>
+                      </div>                  
+                      <br>    
+ <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;font-style: italic; text-align: center;">Данные о продаже обновляються в живом потоке.
+ </p>
+ <br>
+ </div>
+
+
+                  </form>
+ </blockquote>
+
+ <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#cad2df" style="width:600px; max-width: 600px; font-size: 1px; line-height: 1px;">&nbsp;</td></tr>
+ </table>
+              </div>
+            </div>
+          </div>
+ <!--sfirsitul regiunii de Chisinau-->
+    
+ <!--Inceput reg Nord-->      
+ <div class="kjm">
+  <div style="display: none; margin-top: 25px;" class="show nord-region">
+              <div style="padding-top:50px;padding-bottom:50px;padding-right:50px;padding-left:100px;text-align:left;background: #ffffff; box-shadow: 0px 10px 12px -5px rgba(206,213,219,0.8); border-radius: 3px;" class="td pt50 pb50 pl50 pr50 tal mw600">
+
+ <blockquote>
+ <div class="nord-">
+          <h3 style="font-family:'brandon_bold', Brandon Grotesque, sans-serif;font-size:30px;line-height:36px;color:#3c4656;font-weight:bold;margin:0;">Северный регион&nbsp;<span class="fsz15" style="font-size:15px;">(14 SAC)</span>
+          </h3>
+          <div class="table mt25 mb10" style="border-bottom: 1px solid #eee;">
+          <div class="td w70p pr15 pt25 pb10" style="padding-bottom:10px;padding-right:15px;padding-top:25px;">
+          <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;">Название АЗС
+          </p>
+          </div>
+          <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+          <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;">Сумма&nbspпродаж,лей
+          </p>
+                        </div>
+
+                        <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+                        
+                        </div>
+                  </div>
+                  <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Soroca</p> 
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;display: none;"></div>
+                          </div>
+                        <div class="td w15p va-m">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">95123</p>
+                          
+                        </div>
+                        <div class="td w15p">
+                          
+                        </div>
+                      </div>     
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Singerei</p> 
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;display: none;"></div>
+                          </div>
+                        <div class="td w15p va-m">
+                          <p class="p gmail-hide" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">63258</p>
+                          
+                        </div>
+                        <div class="td w15p">
+                          
+                        </div>
+                      </div>                
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Drochia</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">85147</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Rezina</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">985216</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Edinet-1 </p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">521463</p>
+                        </div>
+                        <div class="td w15p">
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Tambula</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">587423</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>                      
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Corlateni</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">54789</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Briceni</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">23658</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Edinet 2</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">58742</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Ratus, Criuleni</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">15987</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div> 
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Balti</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">357896</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div> 
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Riscani (Nihoreni)</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">21548</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Orhei</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">652147</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>  
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                        <div class="td w70p pr15" style="padding-right:15px;">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;display: inline;">Falesti</p>
+                          <div class="fsz14 bold normal warning" style="color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;font-weight:bold;font-size:14px;"></div>
+                        </div>
+                        <div class="td w15p">
+                          <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;">25893</p>
+                        </div>
+                        <div class="td w15p">                          
+                        </div>
+                      </div>  
+          <div class="table pt10 pb5 mt10 mb5" style="padding-bottom:5px;padding-top:10px;">
+                      </div> 
+          <div class="table mt25 mb10" style="border-bottom: 2px solid #eee; border-top: 2px solid #eee;">
+          <div class="td w70p pr15 pt25 pb10" style="padding-bottom:10px;padding-right:15px;padding-top:10px;">
+                          <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;">ИТОГО</p>
+                        </div>
+          <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:10px;">
+                            <p class="bold normal" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;color:#353a3e;font-family:'proxima_nova_rgbold', Proxima Nova, Helvetica, Arial, sans-serif;">3548290</p>
+                        </div>
+
+          <div class="td w15p pt25 pb10" style="padding-bottom:10px;padding-top:25px;">
+                          
+                        </div>
+                      </div>                  
+                      <br>    
+ <p class="p" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;line-height:24px;font-style: italic; text-align: center;">Данные о продаже обновляються в живом потоке.
+ </p>
+ <br>
+ </div>
+
+
+
+                 </form>
+ </blockquote>
+
+ <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#cad2df" style="width:600px; max-width: 600px; font-size: 1px; line-height: 1px;">&nbsp;</td></tr>
+ </table>
+              </div>
+            </div>
+          </div>
+        </div>
+ <!--Sfirsit regiunea Nord-->
+
+<!--butonul nr 1-->
+<div class="pt25 tac" style="padding-top:50px;text-align:center;">
+                  </div>
+
+<div class="box">
+  
+   <a class="button"onclick="myFunction()" href="#rounder1">Детальней&nbsp→</a>
+   </div>
+   <div id="rounder1" class="overlay">
+   <a class="cancel" href="#showrounder1"></a>
+   <div class="rounder">
+        
+   <iframe  id="myframe" class="nb"src=""width="760" height="800"></iframe>
+   <a class="close" href="#showrounder1">&times;</a>
+<script>
+function myFunction() {
+  document.getElementById("myframe").src = "./Grafice.html";
+}
+</script>
+   </div>
+</div><div class="pt25 tac" style="padding-top:25px;text-align:center;">
+                  </div>
+<!--butonul se sfirseste-->
+        <span class="fallback-hide webkit-hide">&nbsp;</span>
+      
+        <div style="padding-top:50px;padding-bottom:50px;padding-right:50px;padding-left:50px;background: #6b6290; box-shadow: 0px 10px 12px -5px rgba(206,213,219,0.8); border-radius: 3px;" class="pt50 pb50 pl50 pr50 questions">
+          <p class="p tac fsz18 lh24 white" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;color:#788394;font-size:16px;font-size:18px;line-height:24px;color:#ffffff;text-align:center;">При возникновении проблем просьба обратиться в <a href="tel:+37368145826" target="_self" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#0088cc;text-decoration:underline;color: #ffffff;"
+              class="link">службу поддержки.</a><br class="mob-hide"> </p>
+        </div>
+        
+      </div>
+      
+      <div class="section footer-bg pt50" style="padding-top:50px;margin:0 auto;background-color:#e1e7ed;background-color:#3c4656;">
+       
+        <div style="padding-right:15px;padding-left:15px;padding-bottom:50px;color:#b3c4dc;text-align:center;max-width: 600px; margin: 0 auto;" class="footer tac pb50 pl15 pr15">
+         
+            <img src="./images/floricica.svg";>
+
+          <p style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;margin:0;font-size:16px;padding-top:15px;font-size:13px;line-height:18px;mso-margin-top-alt: 15px;" class="pt15">
+            Str. Moara Rosie 5/1<br> Chisinau, MDA 2005, <br>
+            <a href="#" target="_blank" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#b3c4dc;text-decoration:underline;"> Bemol.md</a>
+            <br>
+            <br> The data's  and included information's are confidential and may also be legally privileged. You may not forward, copy, distribute, disclose, retain or use any part of it, if you are not the intended addressee.  <a href="#" style="font-family:'proxima_nova_rgregular', Proxima Nova, Helvetica, Arial, sans-serif;color:#b3c4dc;text-decoration:underline;"
+</body>
